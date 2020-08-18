@@ -12,20 +12,20 @@ export class PostService {
   constructor(private httpClient:HttpClient) { }
 
   getAllPosts(): Observable<IPost[]>{
-    return this.httpClient.get<IPost[]>(`${environment.Api_url}/posts`);
+    return this.httpClient.get<IPost[]>(`https://jsonplaceholder.typicode.com/posts`);
   }
   getPostByID(id): Observable<IPost>{
-    return this.httpClient.get<IPost>(`${environment.Api_url}/posts/`+id);
+    return this.httpClient.get<IPost>(`https://jsonplaceholder.typicode.com/posts/`+id);
   }
   Update(post,id){
     const httpOptions = {headers: new HttpHeaders({
       'Content-Type': 'application/json'
         })};
-    return this.httpClient.put(`${environment.Api_url}/posts/`+id,post,httpOptions);
+    return this.httpClient.put(`https://jsonplaceholder.typicode.com/posts/`+id,post,httpOptions);
   }
 
   Delete(id)
   {
-    return this.httpClient.delete(`${environment.Api_url}/posts/`+id);
+    return this.httpClient.delete(`https://jsonplaceholder.typicode.com/posts/`+id);
   }
 }
