@@ -1,0 +1,14 @@
+<br>
+<br>
+<br>
+<div class="container">
+    <div  class="card">
+        <h5 class="card-header">{{post.id}}</h5>
+        <div class="card-body">
+          <h5 class="card-title">{{post.title}}</h5>
+          <p class="card-text">{{post.body}}</p>
+          <a href="edit/{{post.id}}" class="btn btn-primary" style="margin-right: .5%;">Edit</a>
+          <button (click)="delete(post.id)" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+</div>

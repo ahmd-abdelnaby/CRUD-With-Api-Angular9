@@ -1,0 +1,11 @@
+<br>
+<div class="container">
+    <div *ngFor="let item of Posts" class="card">
+        <h5 class="card-header">{{item.id}}</h5>
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text">{{item.body}}.</p>
+          <a href="/view/{{item.id}}" class="btn btn-primary">View</a>
+        </div>
+      </div>
+</div>
